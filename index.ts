@@ -12,6 +12,29 @@ function ecrireMessage(message: string): void {
     console.log(message);
 }
 
+interface Joueur {
+    nom: string;   
+    prenom: string;
+    age: number;
+    nombreDeBilles: number;
+    couleurBille: string;
+    formeBille: string;
+}
+interface Partie {
+    joueurs: Joueur[];
+    nombreDeTours: number;
+    estTerminee: boolean;
+}
+interface ReglesDuJeu {
+    nombreDeBillesInitial: number;
+    nombreMaxJoueurs: number;
+    objectif: string;
+}
+interface TourDeJeu {
+    numero: number;
+    joueurActuel: Joueur;
+    action: string;
+}
 
 function afficherNommbredebillequejai(nombre: number): void {
 ecrireMessage("Nombre de billes que j'ai : " + nombre);
@@ -64,3 +87,4 @@ afficherlenombredebillequejai2();
 afficherNommbredebillequejaiautrement();
 nombreDeformesdebilles();
 afficheNombreDeformesdebilles();
+
